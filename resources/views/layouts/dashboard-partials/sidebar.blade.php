@@ -1,7 +1,7 @@
 <aside class="menu-sidebar d-none d-lg-block">
     <div class="logo">
         <a href="#">
-            <img src="{{ asset('images/cruise-planner-logo.jpg') }}" alt="Cruise Planner" />
+            <img src="{{ asset('images/strategic-logo.jpg') }}" alt="Cruise Planner" />
            <!-- Logo -->
         </a>
     </div>
