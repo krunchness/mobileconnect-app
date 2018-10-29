@@ -10,7 +10,7 @@
     <meta name="keywords" content="au theme template">
 
     <!-- Title Page-->
-    <title>Cruise Planners - Reset Password</title>
+    <title>Strategic Connection - Reset Password</title>
 
     <!-- Fontfaces CSS-->
     <link href="{{ asset( 'css/dashboard/css/font-face.css' ) }}" rel="stylesheet" media="all">
@@ -40,7 +40,7 @@
                     <div class="login-content">
                         <div class="login-logo">
                             <a href="#">
-                                <img src="{{ asset('images/cruise-planner-logo.jpg') }}" alt="Cruise Planner">
+                                <img src="{{ asset('images/strategic-logo.jpg') }}" alt="Strategic Connection">
                                 <!-- Logo -->
                             </a>
                         </div>

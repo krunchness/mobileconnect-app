@@ -10,7 +10,7 @@
     <meta name="keywords" content="au theme template">
     @yield('custom_html_metas')
     <!-- Title Page-->
-    <title>Cruise Planners - Dashboard</title>
+    <title>Strategic Connection - Dashboard</title>
 
     <!-- Fontfaces CSS-->
     <link href="{{ asset( 'css/dashboard/font-face.css' ) }}" rel="stylesheet" media="all">
