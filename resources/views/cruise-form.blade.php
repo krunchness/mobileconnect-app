@@ -68,9 +68,9 @@
 						<span><a href="https://www.cruisetheworldvacations.com/page/25626-Texting%20Terms%20of%20Use%20and%20Privacy%20Statement">Here is the link to the terms and privacy:</a></span>
 					</p>	
 					<p class="form-note">
-						<span>You may revieve up to (4) msgs per month</span>
-						<span>You will receive an enrollment confirmation text.</span>
-						<span>Reply "STOP" to end or "HELP" for help to any message.</span>
+						<span>1. By entering this contest, you are consenting to receiving up to (4) text messages from Strategic Connection, but not limited to this contest or the Small Business Expo.</span>
+						<span>2. Message and data rates may apply</span>
+						<span>3. No purchase necessary & you must be at least 18 years old to enter</span>
 					</p>
 					<p class="form-note">Enrollment is not required for purchase of any product or service.</p>
 				</form>
