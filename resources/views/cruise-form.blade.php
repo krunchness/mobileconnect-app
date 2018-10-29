@@ -24,11 +24,11 @@
 				  <div class="form-row">
 				    <div class="form-group col-md-6">
 				      <label>Email Address</label>
-						<input class="form-control" name="email_address" type="email" required>
+						<input class="form-control" name="email_address" type="email" placeholder="Email Address" required>
 				    </div>
 				    <div class="form-group col-md-6">
 				      <label>Business Name</label>
-						<input class="form-control" name="business_name" required>
+						<input class="form-control" name="business_name" placeholder="Business Name" required>
 				    </div>
 				  </div>
 				  <div class="form-row">
