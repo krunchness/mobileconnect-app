@@ -48,7 +48,7 @@
                             @if(@session('error-msg'))
                                         <span style="text-align:center; padding: 10px 0; display:block; color:red;"><strong>Error: {{ @session('error-msg') }}</strong></span>
                             @endif
-                            <form action="{{ route('cruisehome.resetPassword') }}" method="post">
+                            <form action="{{ route('strategyhome.resetPassword') }}" method="post">
                                 @csrf
                                 <input type="hidden" name="_method" value="PUT">
                                 <div class="form-group">
@@ -67,7 +67,7 @@
                                         <a href="#">Forgotten Password?</a>
                                     </label>
                                 </div> -->
-                                <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit">Reset Password</button>
+                                <button class="au-btn au-btn--block au-btn-blue m-b-20" type="submit">Reset Password</button>
                             </form>
                             <!-- <div class="register-link">
                                 <p>

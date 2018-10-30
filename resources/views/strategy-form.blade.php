@@ -8,8 +8,8 @@
 					<img src="{{ asset('images/strategic-logo.jpg') }}" width="400">
 				</div>
 
-				<p class="form-note">Thank you for your interest in our "<em><strong>CP MOBILE CONNECT</strong></em>"! Please fill out the form to sign up for promotional alerts.</p>
-				<form method="POST" action="{{ route('cruisehome.store') }}" id="cruiseform">
+				<!-- <p class="form-note">Thank you for your interest in our "<em><strong>CP MOBILE CONNECT</strong></em>"! Please fill out the form to sign up for promotional alerts.</p> -->
+				<form method="POST" action="{{ route('strategyhome.store') }}" id="strategyform">
 					{{ csrf_field() }}
 				  <div class="form-row">
 				    <div class="form-group col-md-6">
@@ -24,7 +24,7 @@
 				  <div class="form-row">
 				    <div class="form-group col-md-6">
 				      <label>Email Address</label>
-						<input class="form-control" name="email_address" type="email" placeholder="Email Address" required>
+						<input class="form-control" name="email" type="email" placeholder="Email Address" required>
 				    </div>
 				    <div class="form-group col-md-6">
 				      <label>Business Name</label>
@@ -34,20 +34,20 @@
 				  <div class="form-row">
 				    <div class="form-group col-md-6">
 				    	<label>Industry</label>
-				      	<select class="form-control" name="cpconnect_question" required>
+				      	<select class="form-control" name="industry" required>
 					    	<option value="website">Website</option>
 					    </select>
 				    </div>
 				    <div class="form-group col-md-6">
 				      <label>Mobile Number</label>
-				      <div data-tip="Format: (123)123-1234">
-					    <input type="tel" class="form-control" name="mobile_no" placeholder="Mobile Number" pattern="[\(]\d{3}[\)]\d{3}[\-]\d{4}">
+				      <div data-tip="Format: (123) 123-1234">
+					    <input type="tel" class="form-control" name="mobile_no" placeholder="Mobile Number" pattern="[\(]\d{3}[\)]\s\d{3}[\-]\d{4}">
 					</div>
 				      
 				    </div>
 				  </div>
 				  
-				  <div class="form-group">
+				  <!-- <div class="form-group">
 				    <label>How did you hear about "<em><strong>CP Mobile CONNECT</strong></em>"?</label>
 				    <select class="form-control" name="cpconnect_question" required>
 				      <option value="website">Website</option>
@@ -59,20 +59,20 @@
 				      <option value="show">Show</option>
 				      <option value="print-ads">Print Ads</option>
 				    </select>
-				  </div>
-				  <button type="submit" class="btn btn-success cruiseform-submit-btn">Submit</button>
+				  </div>-->				  
+
+				  <button type="submit" class="btn btn-success submit-btn-blue strategyform-submit-btn">Submit</button>
 
 					</br>
 					</br>
 					<p class="form-note">
-						<span><a href="https://www.cruisetheworldvacations.com/page/25626-Texting%20Terms%20of%20Use%20and%20Privacy%20Statement">Here is the link to the terms and privacy:</a></span>
+						<span>Terms and Conditions:</span>
 					</p>	
 					<p class="form-note">
 						<span>1. By entering this contest, you are consenting to receiving up to (4) text messages from Strategic Connection, but not limited to this contest or the Small Business Expo.</span>
 						<span>2. Message and data rates may apply</span>
 						<span>3. No purchase necessary & you must be at least 18 years old to enter</span>
 					</p>
-					<p class="form-note">Enrollment is not required for purchase of any product or service.</p>
 				</form>
 			</div>
 		</div>
@@ -97,7 +97,7 @@
         // });
 
 
-        $('#cruiseform').submit(function(e){
+        $('#strategyform').submit(function(e){
         	// e.preventDefault();
 
         	var errorCounter = 0;

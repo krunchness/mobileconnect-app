@@ -16,10 +16,10 @@
 	// });
 
 
-Route::get('/', 'CruiseController@showCruiseForm')->name('cruisehome.index');
-Route::post('/store', 'CruiseController@storeCruiseForm')->name('cruisehome.store');
-Route::get('/forgot-password', 'CruiseController@resetPasswordForm');
-Route::match(['PUT', 'PATCH'], '/forgot-password', 'CruiseController@resetPasswordSubmit')->name('cruisehome.resetPassword');
+Route::get('/', 'StrategyController@showStrategyForm')->name('strategyhome.index');
+Route::post('/store', 'StrategyController@storeStrategyForm')->name('strategyhome.store');
+Route::get('/forgot-password', 'StrategyController@resetPasswordForm');
+Route::match(['PUT', 'PATCH'], '/forgot-password', 'StrategyController@resetPasswordSubmit')->name('strategyhome.resetPassword');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

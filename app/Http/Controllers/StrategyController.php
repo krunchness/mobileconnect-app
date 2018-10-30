@@ -5,34 +5,34 @@ namespace speechless\Http\Controllers;
 use Illuminate\Http\Request;
 use speechless\PersonInfo;
 use speechless\User;
-class CruiseController extends Controller
+class StrategyController extends Controller
 {
-    public function showCruiseForm()
+    public function showStrategyForm()
     {
-    	return view('cruise-form');
+    	return view('strategy-form');
     }
 
-    public function storeCruiseForm(Request $request)
+    public function storeStrategyForm(Request $request)
     {
 
+        // dd($request->all());
     	$this->validate($request, [
     		'first_name' => 'required',
     		'last_name' => 'required',
-    		'birth_date' => 'required',
-    		'gender' => 'required',
+    		'email' => 'required',
+    		'business_name' => 'required',
     		'mobile_no' => 'required',
-    		'cpconnect_question' => 'required',
+    		'industry' => 'required',
     	]);
 
-    	$mobile_no = str_replace(['(', ')', '-'], '', $request->mobile_no);
+    	// $mobile_no = str_replace(['(', ')', '-'], '', $request->mobile_no);
     	PersonInfo::create([
     		'first_name' => $request->first_name,
     		'last_name' => $request->last_name,
-    		'birth_date' => $request->birth_date,
-    		'gender' => $request->gender,
-    		'mobile_no' => $mobile_no,
-    		'cpconnect_question' => $request->cpconnect_question,
-    		'anniv_date' => $request->anniv_date,	
+    		'email' => $request->email,
+    		'business_name' => $request->business_name,
+    		'mobile_no' => $request->mobile_no,
+    		'industry' => $request->industry,
     	]);
     
 

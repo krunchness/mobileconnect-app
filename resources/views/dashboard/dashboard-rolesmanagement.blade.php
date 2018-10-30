@@ -28,7 +28,7 @@
                     <i class="zmdi zmdi-filter-list"></i>filters</button> -->
             </div>
             <div class="table-data__tool-right">
-                <button class="au-btn au-btn-icon au-btn--green au-btn--small add-item-btn">
+                <button class="au-btn au-btn-icon au-btn-blue au-btn--small add-item-btn">
                     <i class="zmdi zmdi-plus"></i>Add New Role</button>
                 <!-- <div class="rs-select2--dark rs-select2--sm rs-select2--dark2">
                     <select class="js-select2" name="type">

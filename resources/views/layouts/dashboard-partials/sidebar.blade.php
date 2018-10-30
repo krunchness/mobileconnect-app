@@ -21,7 +21,7 @@
                 
                 <li class="has-sub">
                     <a class="js-arrow" href="#">
-                        <i class="fas fa-mail-bulk"></i>Inquiries
+                        <i class="fas fa-clipboard-list"></i>Inquiries
                         <span class="arrow">
                             <i class="fas fa-angle-down"></i>
                         </span>

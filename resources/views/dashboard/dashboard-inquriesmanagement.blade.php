@@ -37,7 +37,7 @@
                 ];
             ?>
             <div class="table-data__tool-right">
-                <a href="{{route('inquiries.exportToCSV')}}" target="_blank" class="chosen-single export-csv-btn"><button class="au-btn au-btn-icon au-btn--green au-btn--small " export-data='{{ json_encode($csv_data) }}' download-file=''>
+                <a href="{{route('inquiries.exportToCSV')}}" target="_blank" class="chosen-single export-csv-btn"><button class="au-btn au-btn-icon au-btn-blue au-btn--small " export-data='{{ json_encode($csv_data) }}' download-file=''>
                     <i class="zmdi zmdi-plus"></i>Export to CSV</button></a>
                 <!-- <div class="rs-select2--dark rs-select2--sm rs-select2--dark2">
                     <select class="js-select2" name="type">
@@ -60,15 +60,17 @@
             <table class="table table-data2" id="filesTable">
                 <thead>
                     <tr>
-                        <th>Created Date</th>
+                        <th>Date</th>
                         <th>First Name</th>
                         <th>Last Name</th>
-                        <th>Gender</th>
-                        <th>Birth Date</th>
-                        <th>Anniversary Date</th>
+                        <th>Email Address</th>
                         <th>Mobile No</th>
-                        <th>Reference</th>
-                        <th></th>
+                        <th>Business Name</th>
+                        <th>Industry</th>
+
+                        @if(auth()->user()->hasRole->role_name == 'System Admin')
+                            <th></th>
+                        @endif
                     </tr>
                 </thead>
                 <tbody>
@@ -77,29 +79,29 @@
                             <td>{{ ucfirst($inquiry->created_at) }}</td>
                             <td>{{ ucfirst($inquiry->first_name) }}</td>
                             <td>{{ ucfirst($inquiry->last_name) }}</td>
+                            <td class="desc">{{ $inquiry->email }}</td>
+                            <td>{{ $inquiry->mobile_no }}</td>
+                            <td>{{ ucfirst($inquiry->business_name) }}</td>
+                            <td>{{ ucfirst($inquiry->industry) }}</td>
+
+                            @if(auth()->user()->hasRole->role_name == 'System Admin')
                             <td>
-                                <span class="block-email">{{ ucfirst($inquiry->gender) }}</span>
+                                <div class="table-data-feature">
+                                    <!-- <button class="item download-file" data-file=" " data-toggle="tooltip" data-placement="top" title="Download">
+                                        <i class="zmdi zmdi-cloud-download"></i>
+                                    </button> -->
+                                   <!--  <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
+                                        <i class="zmdi zmdi-edit"></i>
+                                    </button> -->
+                                    <button class="item delete-inquiry-btn" data-toggle="modal" data-name="{{ $inquiry->first_name . ' ' . $inquiry->last_name }}" delete-inquiry-id="{{ $inquiry->id }}" data-placement="top" title="Delete" data-target="#deleteInquiryModal">
+                                        <i class="zmdi zmdi-delete"></i>
+                                    </button>
+                                   <!--  <button class="item" data-toggle="tooltip" data-placement="top" title="More">
+                                        <i class="zmdi zmdi-more"></i>
+                                    </button> -->
+                                </div>
                             </td>
-                            <td class="desc">{{ ucfirst($inquiry->birth_date) }}</td>
-                            <td>{{ ucfirst($inquiry->anniv_date) }}</td>
-                            <td>{{ ucfirst($inquiry->mobile_no) }}</td>
-                            <td>{{ ucfirst($inquiry->cpconnect_question) }}</td>
-                            <td>
-                            <div class="table-data-feature">
-                                <!-- <button class="item download-file" data-file=" " data-toggle="tooltip" data-placement="top" title="Download">
-                                    <i class="zmdi zmdi-cloud-download"></i>
-                                </button> -->
-                               <!--  <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
-                                    <i class="zmdi zmdi-edit"></i>
-                                </button> -->
-                                <button class="item delete-inquiry-btn" data-toggle="modal" data-name="{{ $inquiry->first_name . ' ' . $inquiry->last_name }}" delete-inquiry-id="{{ $inquiry->id }}" data-placement="top" title="Delete" data-target="#deleteInquiryModal">
-                                    <i class="zmdi zmdi-delete"></i>
-                                </button>
-                               <!--  <button class="item" data-toggle="tooltip" data-placement="top" title="More">
-                                    <i class="zmdi zmdi-more"></i>
-                                </button> -->
-                            </div>
-                        </td>
+                            @endif
                         </tr>
                     @endforeach
                 </tbody>

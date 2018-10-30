@@ -11,7 +11,7 @@ class DashboardController extends Controller
     public function showInquiries()
     {
     	$inquiries = PersonInfo::all();
-        // dd(auth()->user());
+        // dd($inquiries);
     	return view('dashboard.dashboard-inquriesmanagement', compact(['inquiries']));
     }
 
