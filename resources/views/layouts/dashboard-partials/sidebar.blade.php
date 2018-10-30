@@ -21,14 +21,14 @@
                 
                 <li class="has-sub">
                     <a class="js-arrow" href="#">
-                        <i class="fas fa-clipboard-list"></i>Inquiries
+                        <i class="fas fa-clipboard-list"></i>Registration
                         <span class="arrow">
                             <i class="fas fa-angle-down"></i>
                         </span>
                     </a>
                     <ul class="list-unstyled navbar__sub-list js-sub-list">
                         <li>
-                            <a href="{{ route('inquiries.showInquiries') }}">All Inquiries</a>
+                            <a href="{{ route('registration.showRegistered') }}">All Registered</a>
                         </li>
                         <!-- <li>
                             <a href="">Manage Roles</a>

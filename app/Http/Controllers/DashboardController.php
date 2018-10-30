@@ -8,11 +8,11 @@ use speechless\PersonInfo;
 
 class DashboardController extends Controller
 {
-    public function showInquiries()
+    public function showRegistered()
     {
     	$inquiries = PersonInfo::all();
         // dd($inquiries);
-    	return view('dashboard.dashboard-inquriesmanagement', compact(['inquiries']));
+    	return view('dashboard.dashboard-registeredmanagement', compact(['inquiries']));
     }
 
     public function exportToCSV(Request $request)
