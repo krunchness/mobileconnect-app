@@ -11,7 +11,7 @@
 
 	@yield('head-custom')
 
-	<link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('css/style.css?ver=1.0.1') }}">
 </head>
 <body>
 

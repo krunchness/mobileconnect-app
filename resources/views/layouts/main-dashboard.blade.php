@@ -33,7 +33,7 @@
 
     <!-- Main CSS-->
     <link href="{{ asset( 'css/dashboard/theme.css' ) }}" rel="stylesheet" media="all">
-    <link href="{{ asset( 'css/dashboard/custom.css' ) }}" rel="stylesheet" media="all">
+    <link href="{{ asset( 'css/dashboard/custom.css?ver=1.0.1' ) }}" rel="stylesheet" media="all">
 
 </head>
 
