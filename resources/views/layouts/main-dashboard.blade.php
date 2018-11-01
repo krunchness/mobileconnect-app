@@ -37,7 +37,7 @@
 
 </head>
 
-<body class="animsition">
+<body id="mainDashboard" class="animsition">
     <div class="page-wrapper">
         <!-- HEADER MOBILE-->
         <header class="header-mobile d-block d-lg-none">

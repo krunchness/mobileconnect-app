@@ -4,8 +4,20 @@
 	<div class="row justify-content-center">
 		<div class="col-lg-9">
 			<div class="form-container">
-				<div class="site-logo">
-					<img src="{{ asset('images/strategic-logo.jpg') }}" width="400">
+				<div class="site-logo-container">
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="site-logo">
+								<img src="{{ asset('images/strategic-logo.jpg') }}" width="400">
+							</div>
+						</div>
+
+						<div class="col-lg-6">
+							<div class="site-banner">
+								<img src="{{ asset('images/text-to-win.jpg') }}" alt="Text To Win">
+							</div>
+						</div>					
+					</div>
 				</div>
 
 				<!-- <p class="form-note">Thank you for your interest in our "<em><strong>CP MOBILE CONNECT</strong></em>"! Please fill out the form to sign up for promotional alerts.</p> -->
@@ -14,34 +26,38 @@
 				  <div class="form-row">
 				    <div class="form-group col-md-6">
 				      <label>First Name</label>
-				      <input type="text" class="form-control" name="first_name" placeholder="First Name" required>
+				      <span class="error-msg"> required field * </span>
+				      <input type="text" class="form-control" id="firstname_input" name="first_name" placeholder="First Name" required>
 				    </div>
 				    <div class="form-group col-md-6">
 				      <label>Last Name</label>
-				      <input type="text" class="form-control" name="last_name" placeholder="Last Name" required>
+				      <span class="error-msg"> required field * </span>
+				      <input type="text" class="form-control" id="lastname_input" name="last_name" placeholder="Last Name" required>
 				    </div>
 				  </div>
 				  <div class="form-row">
 				    <div class="form-group col-md-6">
 				      <label>Email Address</label>
-						<input class="form-control" name="email" type="email" placeholder="Email Address" required>
+				      <span class="error-msg"> required field * </span>
+					  <input class="form-control" id="email_input" name="email" type="email" placeholder="Email Address" required>
 				    </div>
 				    <div class="form-group col-md-6">
 				      <label>Business Name</label>
-						<input class="form-control" name="business_name" placeholder="Business Name" required>
+				      <span class="error-msg"> required field * </span>
+						<input class="form-control" id="businessname_input" name="business_name" placeholder="Business Name" required>
 				    </div>
 				  </div>
 				  <div class="form-row">
 				    <div class="form-group col-md-6">
 				    	<label>Industry</label>
-				      	<select class="form-control" name="industry" required>
-					    	<option value="website">Website</option>
-					    </select>
+				    	<span class="error-msg"> required field * </span>
+						<input class="form-control" id="industry_input" name="industry" placeholder="Industry" required>
 				    </div>
 				    <div class="form-group col-md-6">
 				      <label>Mobile Number</label>
+				      <span class="error-msg"> required field * / format: (123) 123-1234</span>
 				      <div data-tip="Format: (123) 123-1234">
-					    <input type="tel" class="form-control" name="mobile_no" placeholder="Mobile Number" pattern="[\(]\d{3}[\)]\s\d{3}[\-]\d{4}">
+					    <input type="tel" class="form-control" id="mobileno_input" name="mobile_no" placeholder="Mobile Number" pattern="[\(]\d{3}[\)]\s\d{3}[\-]\d{4}" required>
 					</div>
 				      
 				    </div>
@@ -83,43 +99,7 @@
 
 	<link rel="stylesheet" type="text/css" href="{{ asset('vendor/gijgo/css/gijgo.min.css') }}">
 	<script type="text/javascript" src="{{ asset('vendor/gijgo/js/gijgo.min.js') }}"></script>
-	<script type="text/javascript" src="{{ asset('vendor/moment.js/moment.min.js') }}"></script>
 @endsection
 
 @section('footer-custom')
-	<script>
-        // $('#bday-picker').datepicker({
-        // 	uiLibrary: 'bootstrap4'
-        // });
-
-        // $('#anniv-picker').datepicker({
-        // 	uiLibrary: 'bootstrap4'
-        // });
-
-
-        $('#strategyform').submit(function(e){
-        	// e.preventDefault();
-
-        	var errorCounter = 0;
-        	// if (moment($('#anniv-picker').val(), 'MM/DD/YYYY',true).isValid() == false) {
-        	// 	alert('Please Use The DatePicker for Anniversary Date To Have a Correct Format');
-
-        	// 	errorCounter++;
-
-        	// 	return false;
-        	// }
-
-        	// if (moment($('#bday-picker').val(), 'MM/DD/YYYY',true).isValid() == false) {
-        	// 	alert('Please Use The DatePicker for Birth Date To Have a Correct Format');
-
-        	// 	errorCounter++;
-        	// 	return false;
-        	// }
-
-        	// if (errorCounter == 0) {
-        	// 	$('.cruiseform-submit-btn').submit();
-        	// }
-		    
-        });
-    </script>
 @endsection
