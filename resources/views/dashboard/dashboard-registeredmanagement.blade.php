@@ -63,6 +63,7 @@
                 <option value="{{ $time }}">{{ $time }}</option>
             @endforeach
         </select>
+        <label>End Time</label>
         <select name="end_time" class="end_time">
             @foreach($time_list as $time)
                 <option value="{{ $time }}">{{ $time }}</option>
