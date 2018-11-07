@@ -18,10 +18,11 @@ class DashboardController extends Controller
     public function exportToCSV(Request $request)
     {
         
-
+        $ids = explode(",",$request->inquiries_ids);
+        
         if (!empty($request->all())) {
 
-            $inquiries_data = PersonInfo::whereIn('id', [$request->inquiries_ids])->get()->toArray();
+            $inquiries_data = PersonInfo::whereIn('id', $ids)->get()->toArray();
 
         }else{
 
@@ -68,10 +69,18 @@ class DashboardController extends Controller
     }
 
     public function getInquiryByDate(Request $request)
-    {   
+    {      
+
+        // print_r($request->start_time);
         $start_date = new Carbon($request->start_date);
         $end_date = new Carbon($request->end_date);
-        $personinfo = PersonInfo::whereBetween('created_at', [$start_date->format('Y-m-d')." 00:00:00", $end_date->format('Y-m-d')." 23:59:59"])->get();
+
+        if ($request->start_time != null && $request->end_time) {
+            $personinfo = PersonInfo::whereBetween('created_at', [$start_date->format('Y-m-d') ." ". $request->start_time .":00", $end_date->format('Y-m-d') ." ". $request->end_time .":00"])->get();
+        } else {
+            $personinfo = PersonInfo::whereBetween('created_at', [$start_date->format('Y-m-d')." 00:00:00", $end_date->format('Y-m-d')." 23:59:59"])->get();
+        }
+        
 
         $personDetails = [];
         foreach ($personinfo as $key => $info) {
@@ -90,8 +99,11 @@ class DashboardController extends Controller
                 'business_name' => $info->business_name,
                 'industry' => $info->industry,
                 'buttons' => $buttons,
+                'inquiry_id' => $info->id
             ];
         }
+
+        // var_dump($personDetails);
         return response()->json($personDetails);
     }
 }
