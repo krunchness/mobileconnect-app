@@ -55,12 +55,20 @@
         <input type="date" name="start_date" class="start_date">
         <label>End Date</label>
         <input type="date" name="end_date" class="end_date">
+        <label>Start Time</label>
+        <?php $time_list = ['1:00', '2:00', '3:00', '4:00', '5:00', '6:00', '7:00', '8:00', '9:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00', '24:00']; ?>
 
+        <select name="start_time" class="start_time">
+            @foreach($time_list as $time)
+                <option value="{{ $time }}">{{ $time }}</option>
+            @endforeach
+
+        </select>
         <div class="table-responsive table-responsive-data2">
             <table class="table table-data2" id="filesTable">
                 <thead>
                     <tr>
-                        <th>Date</th>
+                        <th width="115px">Date</th>
                         <th>First Name</th>
                         <th>Last Name</th>
                         <th>Email Address</th>

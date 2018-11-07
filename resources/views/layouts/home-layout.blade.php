@@ -23,6 +23,6 @@
 	
 
 	@yield('footer-custom')
-	<script type="text/javascript" src="{{ asset('js/dashboard/script.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('js/dashboard/script.js?ver=1.0.1') }}"></script>
 </body>
 </html>

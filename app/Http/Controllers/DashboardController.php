@@ -71,7 +71,7 @@ class DashboardController extends Controller
     {   
         $start_date = new Carbon($request->start_date);
         $end_date = new Carbon($request->end_date);
-        $personinfo = PersonInfo::whereBetween('created_at', [$start_date, $end_date])->get();
+        $personinfo = PersonInfo::whereBetween('created_at', [$start_date->format('Y-m-d')." 00:00:00", $end_date->format('Y-m-d')." 23:59:59"])->get();
 
         $personDetails = [];
         foreach ($personinfo as $key => $info) {
@@ -85,13 +85,11 @@ class DashboardController extends Controller
                 'created_at' => $info->created_at,
                 'first_name' => $info->first_name,
                 'last_name' => $info->last_name,
-                'gender' => $info->gender,
-                'birth_date' => $info->birth_date,
-                'anniv_date' => $info->anniv_date,
+                'email' => $info->email,
                 'mobile_no' => $info->mobile_no,
-                'cpconnect_question' => $info->cpconnect_question,
+                'business_name' => $info->business_name,
+                'industry' => $info->industry,
                 'buttons' => $buttons,
-                'inquiry_id' => $info->id
             ];
         }
         return response()->json($personDetails);

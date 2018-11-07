@@ -55,9 +55,9 @@
 				    </div>
 				    <div class="form-group col-md-6">
 				      <label>Mobile Number</label>
-				      <span class="error-msg"> required field * / format: (123) 123-1234</span>
-				      <div data-tip="Format: (123) 123-1234">
-					    <input type="tel" class="form-control" id="mobileno_input" name="mobile_no" placeholder="Mobile Number" pattern="[\(]\d{3}[\)]\s\d{3}[\-]\d{4}" required>
+				      <span class="error-msg"> required field *</span>
+				      <div>
+					    <input type="tel" class="form-control" id="mobileno_input" name="mobile_no" placeholder="Mobile Number" minlength="10" maxlength='10' required>
 					</div>
 				      
 				    </div>
