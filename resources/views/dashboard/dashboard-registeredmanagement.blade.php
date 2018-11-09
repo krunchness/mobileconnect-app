@@ -53,22 +53,27 @@
         <input type="hidden" class="hidden-inputs inquiries-datas" datefilter-json-path="{{ route('inquiries.getInquiryByDate') }}" download-only-ids=''>
         <label>Start Date</label>
         <input type="date" name="start_date" class="start_date">
-        <label>End Date</label>
-        <input type="date" name="end_date" class="end_date">
-        <label>Start Time</label>
-        <?php $time_list = ['01:00', '02:00', '03:00', '04:00', '05:00', '06:00', '07:00', '08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00', '24:00']; ?>
+        {{-- <label>End Date</label>
+        <input type="date" name="end_date" class="end_date"> --}}
 
-        <select name="start_time" class="start_time">
-            @foreach($time_list as $time)
-                <option value="{{ $time }}">{{ $time }}</option>
-            @endforeach
-        </select>
-        <label>End Time</label>
-        <select name="end_time" class="end_time">
-            @foreach($time_list as $time)
-                <option value="{{ $time }}">{{ $time }}</option>
-            @endforeach
-        </select>
+        <div class="time_input">
+            <label>Start Time</label>
+            <?php $time_list = ['01:00', '02:00', '03:00', '04:00', '05:00', '06:00', '07:00', '08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00']; ?>
+            <select name="start_time" class="start_time">
+                    <option value="">--:--</option>
+                @foreach($time_list as $time)
+                    <option value="{{ $time }}">{{ $time }}</option>
+                @endforeach
+            </select>
+            <label>End Time</label>
+            <select name="end_time" class="end_time">
+                <option value="">--:--</option>
+                @foreach($time_list as $time)
+                    <option value="{{ $time }}">{{ $time }}</option>
+                @endforeach
+                <option value="23:59">24:00</option>
+            </select>
+        </div>
         <div class="table-responsive table-responsive-data2">
             <table class="table table-data2" id="filesTable">
                 <thead>

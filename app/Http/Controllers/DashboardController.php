@@ -30,7 +30,11 @@ class DashboardController extends Controller
             
         }
 
-        unset($inquiries_data[0]['updated_at']);
+
+
+        $inquiries_data_columns = ['id', 'first_name', 'last_name', 'email', 
+                                    'business_name','mobile_no', 'industry',
+                                  'date_created', 'time_created'];
 
         $headers = [
             'Content-type'        => 'text/csv',
@@ -47,11 +51,20 @@ class DashboardController extends Controller
             
         $fp = fopen($path , 'wb');
 
-        fputcsv($fp, array_keys($inquiries_data[0]));
+        fputcsv($fp, $inquiries_data_columns);
+
 
         foreach ($inquiries_data as $key => $data) {
 
             unset($data['updated_at']);
+
+            $temp_date = explode(' ',$data['created_at']);
+
+            unset($data['created_at']);
+
+            $data['date_created'] = $temp_date[0];
+            $data['time_created'] = $temp_date[1];
+
             fputcsv($fp, $data);
         }
         fclose($fp);
@@ -71,14 +84,19 @@ class DashboardController extends Controller
     public function getInquiryByDate(Request $request)
     {      
 
-        // print_r($request->start_time);
         $start_date = new Carbon($request->start_date);
         $end_date = new Carbon($request->end_date);
 
-        if ($request->start_time != null && $request->end_time) {
-            $personinfo = PersonInfo::whereBetween('created_at', [$start_date->format('Y-m-d') ." ". $request->start_time .":00", $end_date->format('Y-m-d') ." ". $request->end_time .":00"])->get();
+        if ($request->start_time != null || $request->end_time != null) {
+            $ids = explode(",",$request->ids);
+            // print_r($request->all());
+            $personinfo = PersonInfo::whereBetween('created_at', [$start_date->format('Y-m-d') ." ". $request->start_time .":00", $start_date->format('Y-m-d') ." ". $request->end_time .":00"])
+                                    ->get();
+
+            // $personinfo = PersonInfo::whereIn('id', $ids)
+            //                         ->get();
         } else {
-            $personinfo = PersonInfo::whereBetween('created_at', [$start_date->format('Y-m-d')." 00:00:00", $end_date->format('Y-m-d')." 23:59:59"])->get();
+            $personinfo = PersonInfo::whereBetween('created_at', [$start_date->format('Y-m-d')." 00:00:00", $start_date->format('Y-m-d')." 23:59:59"])->get();
         }
         
 
