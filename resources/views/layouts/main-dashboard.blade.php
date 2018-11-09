@@ -33,7 +33,7 @@
 
     <!-- Main CSS-->
     <link href="{{ asset( 'css/dashboard/theme.css' ) }}" rel="stylesheet" media="all">
-    <link href="{{ asset( 'css/dashboard/custom.css?ver=1.0.1' ) }}" rel="stylesheet" media="all">
+    <link href="{{ asset( 'css/dashboard/custom.css?ver=1.0.4' ) }}" rel="stylesheet" media="all">
 
 </head>
 
@@ -110,7 +110,7 @@
 
     <!-- Main JS-->
     <script src="{{ asset( 'js/dashboard/dashboard-main.js') }}"></script>
-    <script src="{{ asset( 'js/dashboard/script.js?ver=1.0.1' ) }}"></script>
+    <script src="{{ asset( 'js/dashboard/script.js?ver=1.0.4' ) }}"></script>
 
 </body>
 
