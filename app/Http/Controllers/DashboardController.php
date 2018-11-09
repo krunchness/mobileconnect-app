@@ -86,17 +86,19 @@ class DashboardController extends Controller
 
         $start_date = new Carbon($request->start_date);
         $end_date = new Carbon($request->end_date);
-
-        if ($request->start_time != null || $request->end_time != null) {
+        // print_r($start_date);
+        if ($request->start_time != null) {
             $ids = explode(",",$request->ids);
-            // print_r($request->all());
+            
             $personinfo = PersonInfo::whereBetween('created_at', [$start_date->format('Y-m-d') ." ". $request->start_time .":00", $start_date->format('Y-m-d') ." ". $request->end_time .":00"])
                                     ->get();
 
             // $personinfo = PersonInfo::whereIn('id', $ids)
             //                         ->get();
-        } else {
+        } elseif($request->start_date != '') {
             $personinfo = PersonInfo::whereBetween('created_at', [$start_date->format('Y-m-d')." 00:00:00", $start_date->format('Y-m-d')." 23:59:59"])->get();
+        } else{
+            $personinfo = PersonInfo::all();
         }
         
 
