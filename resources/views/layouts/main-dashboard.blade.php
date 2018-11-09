@@ -110,7 +110,7 @@
 
     <!-- Main JS-->
     <script src="{{ asset( 'js/dashboard/dashboard-main.js') }}"></script>
-    <script src="{{ asset( 'js/dashboard/script.js') }}"></script>
+    <script src="{{ asset( 'js/dashboard/script.js?ver=1.0.1' ) }}"></script>
 
 </body>
 
