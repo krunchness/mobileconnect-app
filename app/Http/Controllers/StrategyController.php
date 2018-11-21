@@ -26,17 +26,33 @@ class StrategyController extends Controller
     	]);
 
     	// $mobile_no = str_replace(['(', ')', '-'], '', $request->mobile_no);
-    	PersonInfo::create([
-    		'first_name' => $request->first_name,
-    		'last_name' => $request->last_name,
-    		'email' => $request->email,
-    		'business_name' => $request->business_name,
-    		'mobile_no' => $request->mobile_no,
-    		'industry' => $request->industry,
-    	]);
+
+        $info = PersonInfo::where('mobile_no', '=', $request->mobile_no)->first();
+
+        // dd($info);
+
+        if ($info === null) {
+            
+            PersonInfo::create([
+                'first_name' => $request->first_name,
+                'last_name' => $request->last_name,
+                'email' => $request->email,
+                'business_name' => $request->business_name,
+                'mobile_no' => $request->mobile_no,
+                'industry' => $request->industry,
+            ]);
+            
+            return back()->with('message_status', 'true');
+
+
+        } else {
+            
+            return back()->with('message_status', 'false');
+
+        }
     
 
-    	return back();
+    	
     }
 
     public function resetPasswordForm()

@@ -1,6 +1,10 @@
 @extends('layouts.home-layout')
 
 @section('content')
+	test
+
+	
+
 	<div class="row justify-content-center">
 		<div class="col-lg-9">
 			<div class="form-container">
@@ -20,6 +24,19 @@
 					</div>
 				</div>
 
+				@if(session('message_status'))
+
+					@if(session('message_status') == 'true')
+						<div class="alert alert-success" role="alert">
+						  Registration Successful !
+						</div>
+					@else
+						<div class="alert alert-danger" role="alert">
+						  Registration Failed ! Record Already Exist.
+						</div>
+					@endif
+				@endif
+				
 				<!-- <p class="form-note">Thank you for your interest in our "<em><strong>CP MOBILE CONNECT</strong></em>"! Please fill out the form to sign up for promotional alerts.</p> -->
 				<form method="POST" action="{{ route('strategyhome.store') }}" id="strategyform">
 					{{ csrf_field() }}
