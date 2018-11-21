@@ -1,9 +1,6 @@
 @extends('layouts.home-layout')
 
 @section('content')
-	test
-
-	
 
 	<div class="row justify-content-center">
 		<div class="col-lg-9">
