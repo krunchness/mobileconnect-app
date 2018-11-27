@@ -15,7 +15,7 @@ mix.js('resources/assets/js/app.js', 'public/js')
    .sass('resources/assets/sass/app.scss', 'public/css');
 
 mix.browserSync({
-    proxy: 'localhost/laravel/speechless/public/',
+    proxy: 'localhost/laravel/mobile_connect/public/',
     files: [
            'app/**/*',
            'resources/views/**/*',

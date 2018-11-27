@@ -1,8 +1,8 @@
 <?php
 
-namespace speechless\Http\Controllers\Auth;
+namespace mobileconnect\Http\Controllers\Auth;
 
-use speechless\Http\Controllers\Controller;
+use mobileconnect\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ResetsPasswords;
 
 class ResetPasswordController extends Controller

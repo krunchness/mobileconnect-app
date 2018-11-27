@@ -1,6 +1,6 @@
 <?php
 
-namespace speechless\Http\Middleware;
+namespace mobileconnect\Http\Middleware;
 
 use Illuminate\Http\Request;
 use Fideloper\Proxy\TrustProxies as Middleware;

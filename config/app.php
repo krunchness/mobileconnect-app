@@ -154,11 +154,11 @@ return [
         /*
          * Application Service Providers...
          */
-        speechless\Providers\AppServiceProvider::class,
-        speechless\Providers\AuthServiceProvider::class,
-        // speechless\Providers\BroadcastServiceProvider::class,
-        speechless\Providers\EventServiceProvider::class,
-        speechless\Providers\RouteServiceProvider::class,
+        mobileconnect\Providers\AppServiceProvider::class,
+        mobileconnect\Providers\AuthServiceProvider::class,
+        // mobileconnect\Providers\BroadcastServiceProvider::class,
+        mobileconnect\Providers\EventServiceProvider::class,
+        mobileconnect\Providers\RouteServiceProvider::class,
 
     ],
 

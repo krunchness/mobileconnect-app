@@ -83,8 +83,8 @@
                         <th>Last Name</th>
                         <th>Email Address</th>
                         <th>Mobile No</th>
-                        <th>Business Name</th>
-                        <th>Industry</th>
+                        <th>Company Name</th>
+                        <th>Reference</th>
 
                         @if(auth()->user()->hasRole->role_name == 'System Admin')
                             <th></th>
@@ -99,8 +99,8 @@
                             <td>{{ ucfirst($inquiry->last_name) }}</td>
                             <td class="desc">{{ $inquiry->email }}</td>
                             <td>{{ $inquiry->mobile_no }}</td>
-                            <td>{{ ucfirst($inquiry->business_name) }}</td>
-                            <td>{{ ucfirst($inquiry->industry) }}</td>
+                            <td>{{ ucfirst($inquiry->company_name) }}</td>
+                            <td>{{ ucfirst($inquiry->scmconnect_question) }}</td>
 
                             @if(auth()->user()->hasRole->role_name == 'System Admin')
                             <td>

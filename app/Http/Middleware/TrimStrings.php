@@ -1,6 +1,6 @@
 <?php
 
-namespace speechless\Http\Middleware;
+namespace mobileconnect\Http\Middleware;
 
 use Illuminate\Foundation\Http\Middleware\TrimStrings as Middleware;
 

@@ -16,10 +16,10 @@
 	// });
 
 
-Route::get('/', 'StrategyController@showStrategyForm')->name('strategyhome.index');
-Route::post('/store', 'StrategyController@storeStrategyForm')->name('strategyhome.store');
-Route::get('/forgot-password', 'StrategyController@resetPasswordForm');
-Route::match(['PUT', 'PATCH'], '/forgot-password', 'StrategyController@resetPasswordSubmit')->name('strategyhome.resetPassword');
+Route::get('/', 'MobileConnectController@showMobileConnectForm')->name('mobileconnect.index');
+Route::post('/store', 'MobileConnectController@storeMobileConnectForm')->name('mobileconnect.store');
+Route::get('/forgot-password', 'MobileConnectController@resetPasswordForm');
+Route::match(['PUT', 'PATCH'], '/forgot-password', 'MobileConnectController@resetPasswordSubmit')->name('mobileconnect.resetPassword');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

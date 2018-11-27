@@ -1,6 +1,6 @@
 <?php
 
-namespace speechless;
+namespace mobileconnect;
 
 use Illuminate\Database\Eloquent\Model;
 

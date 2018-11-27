@@ -1,6 +1,6 @@
 <?php
 
-namespace speechless\Exceptions;
+namespace mobileconnect\Exceptions;
 
 use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;

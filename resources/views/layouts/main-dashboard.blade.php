@@ -6,11 +6,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Login">
-    <meta name="author" content="Hau Nguyen">
-    <meta name="keywords" content="au theme template">
     @yield('custom_html_metas')
     <!-- Title Page-->
-    <title>Strategic Connection - Dashboard</title>
+    <title>SC Mobile Connect - Dashboard</title>
 
     <!-- Fontfaces CSS-->
     <link href="{{ asset( 'css/dashboard/font-face.css' ) }}" rel="stylesheet" media="all">

@@ -1,6 +1,6 @@
 <?php
 
-namespace speechless\Http\Middleware;
+namespace mobileconnect\Http\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Auth;

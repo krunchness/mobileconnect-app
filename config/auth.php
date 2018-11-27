@@ -67,7 +67,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => speechless\User::class,
+            'model' => mobileconnect\User::class,
         ],
 
         // 'users' => [

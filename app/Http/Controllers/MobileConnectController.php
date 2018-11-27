@@ -1,18 +1,18 @@
 <?php
 
-namespace speechless\Http\Controllers;
+namespace mobileconnect\Http\Controllers;
 
 use Illuminate\Http\Request;
-use speechless\PersonInfo;
-use speechless\User;
-class StrategyController extends Controller
+use mobileconnect\PersonInfo;
+use mobileconnect\User;
+class MobileConnectController extends Controller
 {
-    public function showStrategyForm()
+    public function showMobileConnectForm()
     {
-    	return view('strategy-form');
+    	return view('mobileconnect-form');
     }
 
-    public function storeStrategyForm(Request $request)
+    public function storeMobileConnectForm(Request $request)
     {
 
         // dd($request->all());
@@ -20,9 +20,9 @@ class StrategyController extends Controller
     		'first_name' => 'required',
     		'last_name' => 'required',
     		'email' => 'required',
-    		'business_name' => 'required',
+    		'company_name' => 'required',
     		'mobile_no' => 'required',
-    		'industry' => 'required',
+    		'scmconnect_question' => 'required',
     	]);
 
     	// $mobile_no = str_replace(['(', ')', '-'], '', $request->mobile_no);
@@ -37,9 +37,9 @@ class StrategyController extends Controller
                 'first_name' => $request->first_name,
                 'last_name' => $request->last_name,
                 'email' => $request->email,
-                'business_name' => $request->business_name,
+                'company_name' => $request->company_name,
                 'mobile_no' => $request->mobile_no,
-                'industry' => $request->industry,
+                'scmconnect_question' => $request->scmconnect_question,
             ]);
             
             return back()->with('message_status', 'true');

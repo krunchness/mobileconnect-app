@@ -1,6 +1,6 @@
 <?php
 
-namespace speechless\Http\Controllers;
+namespace mobileconnect\Http\Controllers;
 
 use Illuminate\Http\Request;
 

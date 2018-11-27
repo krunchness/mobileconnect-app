@@ -1,10 +1,10 @@
 <?php
 
-namespace speechless\Http\Controllers;
+namespace mobileconnect\Http\Controllers;
 
 use Carbon\Carbon;
 use Illuminate\Http\Request;
-use speechless\PersonInfo;
+use mobileconnect\PersonInfo;
 
 class DashboardController extends Controller
 {
@@ -33,7 +33,7 @@ class DashboardController extends Controller
 
 
         $inquiries_data_columns = ['id', 'first_name', 'last_name', 'email', 
-                                    'business_name','mobile_no', 'industry',
+                                    'company_name', 'mobile_no', 'reference',
                                   'date_created', 'time_created'];
 
         $headers = [

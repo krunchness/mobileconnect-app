@@ -30,7 +30,7 @@ return [
     ],
 
     'stripe' => [
-        'model' => speechless\User::class,
+        'model' => mobileconnect\User::class,
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],

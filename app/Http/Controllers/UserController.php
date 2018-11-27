@@ -1,10 +1,10 @@
 <?php
 
-namespace speechless\Http\Controllers;
+namespace mobileconnect\Http\Controllers;
 
 use Illuminate\Http\Request;
-use speechless\User;
-use speechless\UserRole;
+use mobileconnect\User;
+use mobileconnect\UserRole;
 
 class UserController extends Controller
 {

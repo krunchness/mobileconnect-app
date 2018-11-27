@@ -23,7 +23,7 @@
             "database/factories"
         ],
         "psr-4": {
-            "speechless\\": "app/"
+            "mobileconnect\\": "app/"
         }
     },
     "autoload-dev": {

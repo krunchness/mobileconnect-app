@@ -1,10 +1,10 @@
 <?php
 
-namespace speechless;
+namespace mobileconnect;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use speechless\UserRole;
+use mobileconnect\UserRole;
 
 class User extends Authenticatable
 {

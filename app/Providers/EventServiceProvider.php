@@ -1,6 +1,6 @@
 <?php
 
-namespace speechless\Providers;
+namespace mobileconnect\Providers;
 
 use Illuminate\Support\Facades\Event;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -13,8 +13,8 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'speechless\Events\Event' => [
-            'speechless\Listeners\EventListener',
+        'mobileconnect\Events\Event' => [
+            'mobileconnect\Listeners\EventListener',
         ],
     ];
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace speechless\Console;
+namespace mobileconnect\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;

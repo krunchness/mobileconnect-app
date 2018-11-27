@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Strategic Connection</title>
+	<title>SC Mobile Connect</title>
 
 	<!-- Vendor Files -->
 	<link rel="stylesheet" type="text/css" href="{{ asset('vendor/bootstrap-4.1/bootstrap.min.css') }}">

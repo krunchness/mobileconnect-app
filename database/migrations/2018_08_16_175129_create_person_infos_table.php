@@ -18,9 +18,9 @@ class CreatePersonInfosTable extends Migration
             $table->string('first_name');
             $table->string('last_name');
             $table->string('email');
-            $table->string('business_name');
+            $table->string('company_name');
             $table->string('mobile_no');
-            $table->string('industry');
+            $table->string('scmconnect_question');
             $table->timestamps();
         });
     }
