@@ -3,7 +3,7 @@
 @section('content')
 
 	<div class="row justify-content-center">
-		<div class="col-lg-9">
+		<div class="col-xs-12 col-lg-9">
 			<div class="form-container">
 				<div class="site-logo-container">
 					<div class="row">
@@ -58,7 +58,7 @@
 				    <div class="form-group col-md-6">
 				      <label>Company Name</label>
 				      <span class="error-msg"> required field * </span>
-						<input class="form-control" id="businessname_input" name="company_name" placeholder="Company Name" required>
+					  <input class="form-control" id="businessname_input" name="company_name" placeholder="Company Name" required>
 				    </div>
 				  </div>
 				  <div class="form-row">
@@ -70,10 +70,7 @@
 				    <div class="form-group col-md-6">
 				      <label>Mobile Number</label>
 				      <span class="error-msg"> required field *</span>
-				      <div>
 					    <input type="tel" class="form-control" id="mobileno_input" name="mobile_no" placeholder="Mobile Number" minlength="10" maxlength='10' required>
-					</div>
-				      
 				    </div>
 					<div class="form-group">
 					    <label>How did you hear about "<em><strong>SC Mobile CONNECT</strong></em>"?</label>
